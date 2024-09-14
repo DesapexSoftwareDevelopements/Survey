@@ -6,5 +6,5 @@ import lombok.Data;
 public class ResponseDTO {
     private Long userId;
     private Long questionId;
-    private String selectedOption;
+    private String selectedOption; //commit
 }
