@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-responses
+      author: santosh.g@desapex.com
+      changes:
+        - loadData:
+            tableName: responses
+            file: classpath:/db/changelog/data/responses.csv
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: user_id
+                  type: BIGINT
+              - column:
+                  name: question_id
+                  type: BIGINT
+              - column:
+                  name: selected_option
+                  type: VARCHAR(255)
+              - column:
+                  name: created_at
+                  type: TIMESTAMP

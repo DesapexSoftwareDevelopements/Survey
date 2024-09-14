@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/db.changelog-create-users.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-users.yaml
+  - include:
+      file: db/changelog/db.changelog-create-questions.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-questions.yaml
+  - include:
+      file: db/changelog/db.changelog-create-responses.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-responses.yaml

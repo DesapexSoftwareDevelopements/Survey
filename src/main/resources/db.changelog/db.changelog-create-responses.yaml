@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-responses
+      author: santosh.g@desapex.com
+      changes:
+        - createTable:
+            tableName: responses
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: question_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: selected_option
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP

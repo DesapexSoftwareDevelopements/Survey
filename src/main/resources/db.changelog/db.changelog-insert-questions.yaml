@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-questions
+      author: santosh.g@desapex.com
+      changes:
+        - loadData:
+            tableName: questions
+            file: classpath:/db/changelog/data/questions.csv
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: question_text
+                  type: VARCHAR(255)
+              - column:
+                  name: options
+                  type: JSON  # or VARCHAR(255) if JSON is not supported
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP

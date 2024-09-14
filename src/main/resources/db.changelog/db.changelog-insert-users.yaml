@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-users
+      author: santosh.g@desapex.com
+      changes:
+        - loadData:
+            tableName: users
+            file: classpath:/db/changelog/data/users.csv
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: first_name
+                  type: VARCHAR(200)
+              - column:
+                  name: last_name
+                  type: VARCHAR(200)
+              - column:
+                  name: email
+                  type: VARCHAR(200)
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
